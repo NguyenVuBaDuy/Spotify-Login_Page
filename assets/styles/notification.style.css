@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Form notification */
+
+#notification {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 9999;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    min-width: 400px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    border-left: 5px solid black;
+    transition: all linear .3s;
+    font-family: "Roboto", sans-serif;
+}
+
+.notification__close {
+    cursor: pointer;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes disappear {
+    to {
+        opacity: 0;
+    }
+}
+
+.notification__icon {
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.notification__body {
+    flex-grow: 1;
+}
+
+.notification__body .notification__title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.notification__body .notification__msg {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #75755f;
+}
+
+.notification__close {
+    color: #8A8A89;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+/* notification Detail */
+
+.notification--success {
+    border-color: black;
+
+}
+
+.notification--success .notification__icon,
+.notification--success .notification__title {
+    color: #3CC657;
+}
+
+.notification--error {
+    border-color: rgb(179, 171, 171);
+}
+
+.notification--error .notification__icon,
+.notification--error .notification__title {
+    color: red;
+}
+
+.notification--warning {
+    border-color: #E5A71C;
+}
+
+.notification--warning .notification__icon,
+.notification--warning .notification__title {
+    color: #E5A71C;
+}
+
+.notification--info {
+    border-color: #2465BB;
+}
+
+.notification--info .notification__icon,
+.notification--info .notification__info {
+    color: #2465BB;
+}
+
+
+/* Button Form */
+
+
+/* Button detail */
+
+.btn--success {
+    background-color: green;
+}
+
+.btn--error {
+    background-color: red;
+}
+
+.btn--warning {
+    background-color: #E5A71C;
+}
+
+.btn--info {
+    background-color: #2465BB;
+}

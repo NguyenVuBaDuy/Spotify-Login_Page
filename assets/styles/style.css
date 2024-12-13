@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+#root {
+    min-height: 100vh;
+}
+
+.spotify-login-page {
+    min-height: calc(100% - 81px);
+    background-color: #121212;
+    font-family: "Montserrat", serif;
+}
+
+.wrapped {
+    padding: 32px;
+    background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%);
+    min-height: calc(100% - 81px);
+}
+
+.container {
+    max-width: 734px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-login {
+    background-color: #121212;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px
+}
+
+.spotify-logo {
+    border-bottom: none;
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.title {
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.item {
+    width: 324px;
+    height: 48px;
+    padding: 7px 31px;
+    border: 1px solid rgb(124, 124, 124);
+    margin-bottom: 8px;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item:hover {
+    border: 1px solid #ffffff;
+}
+
+.item-logo img {
+    width: 24px;
+    height: 24px;
+}
+
+.item-title {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    margin: auto;
+}
+
+.divider {
+    width: calc(100% - 200px);
+    color: rgb(255, 255, 255);
+    margin: 32px 100px;
+    border-top: 1px solid rgb(41, 41, 41);
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-image: initial;
+}
+
+.form-login-wrapped {
+    padding-bottom: 8px;
+}
+
+.form-login {
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-bottom: 16px;
+}
+
+.form-login label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-login input {
+    border: 1px solid rgb(124, 124, 124);
+    height: 48px;
+    padding: 12px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-overflow: ellipsis;
+}
+
+.form-login input:hover {
+    border-color: white;
+}
+
+.form-login input::placeholder {
+    font-size: 14px;
+    color: #B3B3B3;
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+    border: 1px solid rgb(124, 124, 124);
+    height: 48px;
+    padding: 12px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-overflow: ellipsis;
+}
+
+.password-input-wrapper input:hover {
+    border-color: white;
+}
+
+.password-input-wrapper input::placeholder {
+    font-size: 14px;
+    color: #B3B3B3;
+}
+
+.toggle-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #b3b3b3;
+    transition: color 0.2s;
+}
+
+.toggle-password-icon:hover {
+    color: white;
+}
+
+
+.button-login {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1ed760;
+}
+
+.button-login:hover {
+    border: 1px solid rgb(124, 124, 124);
+    transform: scale(1.05);
+    background-color: #3BE477;
+}
+
+.other-option {
+    color: white;
+}
+
+.other-option:hover {
+    color: #1ED760;
+}
+
+.footer {
+    padding: 32px;
+    height: 81px;
+    color: #b3b3b3;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .wrapped {
+        padding: 0;
+    }
+
+    .modal-login {
+        padding: 32px;
+    }
+
+    .login-options,
+    .item,
+    .form-login-wrapped,
+    .form-login,
+    .button-login-wrapped {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 11px;
+    }
+
+}
+
+.wrap-remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.wrap-remember input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(232, 182, 182);
+    border-radius: 0;
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+
+.wrap-remember input[type="radio"]:checked {
+    background-color: rgb(183, 106, 106);
+}
+
+
+.wrap-remember label {
+    font-family: "Montserrat", serif;
+    color: rgb(233, 229, 229);
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid1 {
+    border-color: red !important;
+}

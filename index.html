@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/notification.style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div class="spotify-login-page">
+            <div class="wrapped">
+               <div class="container">
+                 <div class="modal-login">
+                    <div class="spotify-logo">
+                        <img src="./assets/images/spotify-logo.png" alt="" style="height: 36px; width: 36px;">
+                    </div>
+
+                    <h2 class="title">
+                        Log in to Spotify
+                    </h2>
+
+                    <div class="login-options">
+                        <div class="item item-google">
+                            <span class="item-logo">
+                                <img src="./assets/images/google-logo.png" alt="">
+                            </span>
+                            <span class="item-title">Continue with Google</span>
+                        </div>
+
+                        <div class="item item-google">
+                            <span class="item-logo">
+                                <img src="./assets/images/facebook-logo.png" alt="">
+                            </span>
+                            <span class="item-title">Continue with Facebook</span>
+                        </div>
+
+                        <div class="item item-google">
+                            <span class="item-logo">
+                                <i class="fa-brands fa-apple" style="color: white; font-size: 26px; width: 24px; height: 24px;"></i>
+                            </span>
+                            <span class="item-title">Continue with Apple</span>
+                        </div>
+
+                        <div class="item item-google">
+                            <span class="item-title">Continue with phone number</span>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <form class="form-login-wrapped"  action="" method="post" autocomplete="off">
+                        <div class="form-login form-login_email">
+                            <label for="email">Email or username</label>
+                            <input type="text" id="email" name="value" placeholder="Email or username">
+                            <span class="form-warning"></span>
+                        </div>
+
+                       <div class="form-login form-login_password">
+                            <label for="password">Password</label>
+                            <div class="password-input-wrapper">
+                                <input type="password" name="password" id="password" placeholder="Password">
+                                <i id="eye-icon" class="fa fa-eye-slash toggle-password-icon" onclick="togglePassword()"></i>
+                            </div>
+                            <span class="form-warning" style="margin-top: -15px;"></span>
+                        </div>
+
+                        <div class="wrap-remember">
+                            <input type="radio" name="remember" value="remember" id="remember">
+                            <label class="form-label" for="enough">Remember me</label>
+                        </div>
+
+                          <div style="padding-bottom: 25px;" class="button-login-wrapped">
+                            <button class="item button-login" type="submit">Log in</button>
+                         </div>
+                    </form>
+
+                  
+
+                    <div style="padding-bottom: 32px;">
+                        <a href="#" class="other-option">Forgot your password?</a>
+                    </div>
+
+                    <div style="color: #b3b3b3; padding-bottom: 16px;">Don't have an account? <a href="#" class="other-option">Sign up for Spotify</a></div>
+                </div>
+               </div>
+            </div>
+            <div id="notification"></div>
+            <footer class="footer">
+                    This site is protected by reCAPTCHA and the Google <u style="cursor: pointer;">Privacy Policy</u> and Terms of <u style="cursor: pointer;">Service apply</u>. <i>@baduy</i>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+    function togglePassword() {
+        const passwordInput = document.getElementById("password");
+        const eyeIcon = document.getElementById("eye-icon");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        }
+    }
+</script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="validator.js"></script>
+</body>
+</html>
