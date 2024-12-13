@@ -37,16 +37,28 @@ const Validator = (option) => {
     const handleSubmitForm = () => {
         var isFormValid = true;
         let email = ''
+        const defaultPassword = '123456'
+        let password = ''
+
         option.rules.forEach((rule) => {
             var inputElement = formElement.querySelector(rule.selector);
             if (inputElement.id === 'email') {
                 email = inputElement.value
+            }
+            if (inputElement.id === 'password') {
+                password = inputElement.value
             }
             var isValid = handleEventOnBlur(inputElement, rule);
             if (!isValid) {
                 isFormValid = false;
             }
         })
+
+        if (password && password != defaultPassword) {
+            showNotification('Login Failed', 'error', 'Huh? Did you forget your password???')
+            return
+        }
+
         if (isFormValid) {
 
             const rememberElement = formElement.querySelector(option.remember)
@@ -63,7 +75,7 @@ const Validator = (option) => {
 
             showNotification('Login Successfully', 'success', 'Welcome:))))')
         } else {
-            showNotification('Login Failed', 'error', "Why don't you enter your email and password? Why? Why???")
+            showNotification('Login Failed', 'warning', "Why don't you enter your email and password? Why? Why???")
         }
     }
 
@@ -106,7 +118,7 @@ Validator({
     buttonLogin: '.button-login',
     remember: '#remember',
     rules: [
-        Validator.isRequire('#email', 'Email cannot be left blank'),
+        Validator.isRequire('#email', 'Email or username cannot be left blank'),
         Validator.isRequire('#password', 'Password cannot be left blank'),
     ]
 })
