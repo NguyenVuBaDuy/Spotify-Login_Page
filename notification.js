@@ -9,7 +9,7 @@ const getParent = (element, selector) => {
 
 var icons = {
     success: "fa-solid fa-circle-check",
-    error: "fa-solid fa-circle-exclamation",
+    error: "fa-solid fa-circle-xmark",
     warning: "fa-solid fa-circle-exclamation",
     info: "fa-solid fa-circle-info"
 }
